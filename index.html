@@ -4,62 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praveen Raj | Principal Architect</title>
+    <meta name="description" content="Principal Architect with 14+ years experience designing high-throughput financial systems. Specializes in payments, enterprise SaaS, and multi-tenant platforms.">
+    <meta name="author" content="Praveen Raj">
+    <meta property="og:title" content="Praveen Raj | Principal Architect">
+    <meta property="og:description" content="14+ years designing high-throughput financial systems processing 200K+ transactions/hour.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://praveen0raj.github.io">
+    <meta name="theme-color" content="#6366f1">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="nav">
+    <!-- Animated background grid -->
+    <div class="bg-grid"></div>
+
+    <nav class="nav" id="nav">
         <div class="nav-container">
             <a href="#" class="nav-logo">PR</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle menu">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="hero">
         <div class="container">
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-name">Praveen Raj</h1>
-            <h2 class="hero-title">Principal Architect</h2>
-            <p class="hero-summary">14+ years designing high-throughput financial systems processing 200K+ transactions/hour. Specializing in trade-off-driven architecture decisions across payments, enterprise SaaS, and multi-tenant platforms.</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">14+</span>
-                    <span class="stat-label">Years Experience</span>
+            <div class="hero-content">
+                <p class="hero-greeting">
+                    <span class="greeting-line"></span>
+                    Hello, I'm
+                </p>
+                <h1 class="hero-name">
+                    Praveen <span class="gradient-text">Raj</span>
+                </h1>
+                <div class="hero-typed-wrapper">
+                    <h2 class="hero-title">
+                        <span class="typed-prefix">I build </span>
+                        <span class="typed-text" id="typedText"></span>
+                        <span class="typed-cursor">|</span>
+                    </h2>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">200K+</span>
-                    <span class="stat-label">Txns/Hour</span>
+                <p class="hero-summary">Principal Architect with 14+ years designing high-throughput financial systems processing 200K+ transactions/hour. Specializing in trade-off-driven architecture decisions across payments, enterprise SaaS, and multi-tenant platforms.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="14" data-suffix="+">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="200" data-suffix="K+">0</span>
+                        <span class="stat-label">Txns/Hour</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="99.9" data-suffix="%" data-decimal="true">0</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="5" data-suffix="">0</span>
+                        <span class="stat-label">Companies Scaled</span>
+                    </div>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">99.9%</span>
-                    <span class="stat-label">Uptime</span>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Get In Touch
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="mailto:praveenraj.dce@gmail.com" class="btn btn-ghost" title="Email me">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
                 </div>
             </div>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
+        </div>
+        <div class="hero-scroll-indicator" id="scrollIndicator">
+            <span>Scroll</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
         </div>
     </header>
 
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>I'm a Principal Architect based in Bengaluru, India, with a track record of delivering production systems from zero-to-one in startup and scale-up environments. I specialize in payments, enterprise SaaS, and multi-tenant platforms.</p>
-                <p>My approach centers on <strong>trade-off-driven architecture decisions</strong> — evaluating options like Auth0 vs Keycloak for multi-tenant SSO, PostgreSQL RLS vs application-level tenant isolation, or event-driven vs synchronous processing, and choosing what best fits the context.</p>
-                <p>Beyond code, I focus on scaling engineering teams, establishing architecture review processes, and creating design doc standards that elevate the entire organization.</p>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p>I'm a Principal Architect based in <strong>Bengaluru, India</strong>, with a track record of delivering production systems from zero-to-one in startup and scale-up environments. I specialize in payments, enterprise SaaS, and multi-tenant platforms.</p>
+                    <p>My approach centers on <strong>trade-off-driven architecture decisions</strong> — evaluating options like Auth0 vs Keycloak for multi-tenant SSO, PostgreSQL RLS vs application-level tenant isolation, or event-driven vs synchronous processing, and choosing what best fits the context.</p>
+                    <p>Beyond code, I focus on <strong>scaling engineering teams</strong>, establishing architecture review processes, and creating design doc standards that elevate the entire organization.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        <h4>Scale</h4>
+                        <p>200K+ txns/hr payment systems with 99.9% uptime</p>
+                    </div>
+                    <div class="highlight-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <h4>Speed</h4>
+                        <p>Zero-to-MVP in 4 months for enterprise BI platform</p>
+                    </div>
+                    <div class="highlight-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <h4>Leadership</h4>
+                        <p>Scaled teams from 3 to 12 engineers across orgs</p>
+                    </div>
+                    <div class="highlight-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <h4>Education</h4>
+                        <p>B.E. Information Technology, Delhi College of Engineering (DTU)</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -70,14 +135,16 @@
             <div class="timeline">
 
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-marker">
+                        <div class="timeline-marker-inner"></div>
+                    </div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
                                 <h3>Founding Engineer, GCC India</h3>
                                 <p class="company">Loglass <span class="badge">Series B, $80M+ raised</span></p>
                             </div>
-                            <span class="timeline-date">Apr 2025 – Present</span>
+                            <span class="timeline-date">Apr 2025 — Present</span>
                         </div>
                         <div class="timeline-details">
                             <h4>Loglass BI Dashboard</h4>
@@ -85,11 +152,13 @@
                                 <li>Architected multi-tenant BI Dashboard using <strong>Kotlin, Spring Boot, PostgreSQL</strong>; delivered MVP in 4 months serving 10+ enterprise clients including Fortune 500 companies.</li>
                                 <li>Engineered multi-level caching reducing query latency by <strong>60%</strong>.</li>
                                 <li>Established layered <strong>DDD architecture</strong> (Domain, Application, Infrastructure, Presentation).</li>
+                                <li>Bridged communication between Japanese HQ and India GCC teams across 12-hour timezone gap.</li>
                             </ul>
                             <h4>Loglass-Capex</h4>
                             <ul>
                                 <li>Architected CAPEX planning SaaS using <strong>Go (Gin), Clean Architecture</strong> with bounded contexts.</li>
                                 <li>Built CI/CD pipelines with vulnerability scanning, reducing deployment failures by <strong>80%</strong>.</li>
+                                <li>Designed engineering productivity framework with <strong>AI-augmented code review</strong>.</li>
                                 <li>Led team of <strong>10 engineers</strong>; hired and onboarded 3 engineers in 6 weeks.</li>
                             </ul>
                         </div>
@@ -97,58 +166,65 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-marker">
+                        <div class="timeline-marker-inner"></div>
+                    </div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
                                 <h3>Architect, Global Payment Management System</h3>
                                 <p class="company">Isha Foundation</p>
                             </div>
-                            <span class="timeline-date">Oct 2022 – Apr 2025</span>
+                            <span class="timeline-date">Oct 2022 — Apr 2025</span>
                         </div>
                         <div class="timeline-details">
                             <ul>
                                 <li>Designed headless payment architecture (<strong>Go, Java, AWS</strong>) processing <strong>2 lakh transactions/hour</strong> with 99.9% uptime.</li>
-                                <li>Developed high-availability Refund API, reducing refund processing from <strong>7 days to 2 days</strong>.</li>
-                                <li>Managed 8–12 engineers; reduced production incidents by <strong>50%</strong>.</li>
+                                <li>Developed high-availability Refund API, reducing refund processing from <strong>7 days to 2 days</strong>, improving donor retention by 15%.</li>
+                                <li>Managed 8–12 engineers; reduced production incidents by <strong>50%</strong>; promoted 2 engineers to senior roles.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-marker">
+                        <div class="timeline-marker-inner"></div>
+                    </div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
                                 <h3>Principal Engineer, Disha Platform</h3>
                                 <p class="company">Mercer Mettl <span class="badge">Acquired by Mercer</span></p>
                             </div>
-                            <span class="timeline-date">Jan 2019 – Oct 2022</span>
+                            <span class="timeline-date">Jan 2019 — Oct 2022</span>
                         </div>
                         <div class="timeline-details">
                             <ul>
                                 <li>Optimized Aadhar lookup using <strong>Bloom filter</strong> (90% latency reduction); implemented circuit breaker and rate limiting.</li>
                                 <li>Reduced SQS processing time by <strong>90%</strong> (1.5 hours to 10 minutes) for 100K+ students.</li>
                                 <li>Built <strong>CoWIN integration APIs</strong> during COVID-19, enabling vaccination tracking for 500K+ users.</li>
+                                <li>Owned technical roadmap for Disha platform; coordinated with product, DevOps, and security.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-marker">
+                        <div class="timeline-marker-inner"></div>
+                    </div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
                                 <h3>Tech Lead, Payments</h3>
                                 <p class="company">FreeCharge <span class="badge">Acquired by Axis Bank</span></p>
                             </div>
-                            <span class="timeline-date">Feb 2018 – Jan 2019</span>
+                            <span class="timeline-date">Feb 2018 — Jan 2019</span>
                         </div>
                         <div class="timeline-details">
                             <ul>
-                                <li>Reduced RuPay transaction failures by <strong>35%</strong>; increased payment success rate to <strong>94%</strong>.</li>
+                                <li>Reduced RuPay transaction failures by <strong>35%</strong> by integrating NPCI Paysecure flow; increased payment success rate to <strong>94%</strong>.</li>
                                 <li>Developed Digital Savings Account APIs (Axis ASAP), contributing to <strong>50K+ new account openings</strong> in first quarter.</li>
                             </ul>
                         </div>
@@ -156,19 +232,21 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-marker">
+                        <div class="timeline-marker-inner"></div>
+                    </div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
                                 <h3>Module Lead, Aggregator & Finance</h3>
                                 <p class="company">Pine Labs <span class="badge">Series C, now $5B valuation</span></p>
                             </div>
-                            <span class="timeline-date">Oct 2013 – Feb 2018</span>
+                            <span class="timeline-date">Oct 2013 — Feb 2018</span>
                         </div>
                         <div class="timeline-details">
                             <ul>
-                                <li>Automated merchant settlement reports using <strong>Spring Batch</strong>; improved batch throughput <strong>3x</strong>.</li>
-                                <li>Built CB/AR/Loan Recovery module enabling automated recovery of <strong>2M+ monthly</strong>.</li>
+                                <li>Automated merchant settlement reports using <strong>Spring Batch</strong>; improved batch throughput <strong>3x</strong>, reducing reconciliation time from 2 days to 4 hours.</li>
+                                <li>Built CB/AR/Loan Recovery module enabling automated recovery of <strong>2M+ monthly</strong> in chargebacks and loans.</li>
                                 <li>Developed HSM encryption APIs and ELK-based search for TrueGains app serving <strong>100K+ consumers</strong>.</li>
                             </ul>
                         </div>
@@ -182,10 +260,14 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Key Projects</h2>
+            <p class="section-subtitle">Production systems I've architected and delivered</p>
             <div class="projects-grid">
 
-                <div class="project-card">
-                    <div class="project-icon">&#9881;</div>
+                <div class="project-card" data-delay="0">
+                    <div class="project-card-glow"></div>
+                    <div class="project-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    </div>
                     <h3>Global Payment System</h3>
                     <p>Headless payment architecture processing 200K+ transactions/hour with 99.9% uptime for global events.</p>
                     <div class="project-tags">
@@ -198,8 +280,11 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">&#9783;</div>
+                <div class="project-card" data-delay="100">
+                    <div class="project-card-glow"></div>
+                    <div class="project-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </div>
                     <h3>Enterprise BI Dashboard</h3>
                     <p>Multi-tenant BI platform delivered in 4 months, serving Fortune 500 clients and accelerating Series B fundraise.</p>
                     <div class="project-tags">
@@ -212,8 +297,11 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">&#9878;</div>
+                <div class="project-card" data-delay="200">
+                    <div class="project-card-glow"></div>
+                    <div class="project-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
                     <h3>CAPEX Planning SaaS</h3>
                     <p>Enterprise CAPEX planning tool with Clean Architecture, multi-tenant security, and comprehensive CI/CD.</p>
                     <div class="project-tags">
@@ -226,8 +314,11 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">&#9960;</div>
+                <div class="project-card" data-delay="0">
+                    <div class="project-card-glow"></div>
+                    <div class="project-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
                     <h3>CoWIN Integration</h3>
                     <p>COVID-19 vaccination tracking APIs built during the pandemic, enabling tracking for 500K+ users.</p>
                     <div class="project-tags">
@@ -240,8 +331,11 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">&#9733;</div>
+                <div class="project-card" data-delay="100">
+                    <div class="project-card-glow"></div>
+                    <div class="project-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
                     <h3>Digital Savings Accounts</h3>
                     <p>Axis ASAP Digital Savings Account APIs at FreeCharge, driving new account openings at scale.</p>
                     <div class="project-tags">
@@ -254,8 +348,11 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon">&#8644;</div>
+                <div class="project-card" data-delay="200">
+                    <div class="project-card-glow"></div>
+                    <div class="project-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+                    </div>
                     <h3>Merchant Settlement System</h3>
                     <p>Automated settlement reports and chargeback recovery for Pine Labs, processing thousands of daily transactions.</p>
                     <div class="project-tags">
@@ -277,6 +374,9 @@
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    </div>
                     <h3>Architecture</h3>
                     <div class="skill-tags">
                         <span>Microservices</span>
@@ -289,6 +389,9 @@
                     </div>
                 </div>
                 <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
                     <h3>Languages</h3>
                     <div class="skill-tags">
                         <span>Go</span>
@@ -299,6 +402,9 @@
                     </div>
                 </div>
                 <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                    </div>
                     <h3>Cloud & Infrastructure</h3>
                     <div class="skill-tags">
                         <span>AWS Lambda</span>
@@ -311,6 +417,9 @@
                     </div>
                 </div>
                 <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    </div>
                     <h3>Data & Monitoring</h3>
                     <div class="skill-tags">
                         <span>PostgreSQL</span>
@@ -322,6 +431,9 @@
                     </div>
                 </div>
                 <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
                     <h3>Practices</h3>
                     <div class="skill-tags">
                         <span>ADRs</span>
@@ -340,17 +452,23 @@
             <p class="contact-intro">Interested in working together or discussing architecture? Feel free to reach out.</p>
             <div class="contact-links">
                 <a href="mailto:praveenraj.dce@gmail.com" class="contact-card">
-                    <span class="contact-icon">&#9993;</span>
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
                     <span class="contact-label">Email</span>
                     <span class="contact-value">praveenraj.dce@gmail.com</span>
                 </a>
                 <a href="https://linkedin.com/in/praveendce" target="_blank" rel="noopener" class="contact-card">
-                    <span class="contact-icon">in</span>
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </div>
                     <span class="contact-label">LinkedIn</span>
                     <span class="contact-value">linkedin.com/in/praveendce</span>
                 </a>
                 <a href="https://github.com/praveen0raj" target="_blank" rel="noopener" class="contact-card">
-                    <span class="contact-icon">&#10094;/&#10095;</span>
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </div>
                     <span class="contact-label">GitHub</span>
                     <span class="contact-value">github.com/praveen0raj</span>
                 </a>
@@ -359,10 +477,19 @@
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <p>Praveen Raj &middot; Bengaluru, India &middot; Delhi College of Engineering (DTU), B.E. Information Technology</p>
+        <div class="container footer-content">
+            <p>Designed & built by Praveen Raj</p>
+            <p class="footer-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Bengaluru, India
+            </p>
         </div>
     </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
 
     <script src="script.js"></script>
 </body>
