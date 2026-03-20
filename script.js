@@ -47,9 +47,9 @@ window.addEventListener('scroll', updateActiveNav);
 const phrases = [
     'scalable payment systems',
     'multi-tenant SaaS platforms',
-    'event-driven architectures',
+    'high-performing engineering teams',
     'high-throughput APIs',
-    'engineering teams'
+    'engineering culture'
 ];
 
 const typedEl = document.getElementById('typedText');
